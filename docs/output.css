@@ -731,15 +731,15 @@ video {
 }
 
 .bg-lightAbout {
-  background-image: url('../docs/img/website2LIGHT4k.png');
+  background-image: url('../img/website2LIGHT4k.png');
 }
 
 .bg-lightHome {
-  background-image: url('../docs/img/websiteLIGHT4k.png');
+  background-image: url('../img/websiteLIGHT4k.png');
 }
 
 .bg-lightProjects {
-  background-image: url('../docs/img/website3LIGHT4k.png');
+  background-image: url('../img/website3LIGHT4k.png');
 }
 
 .bg-cover {
@@ -974,15 +974,15 @@ ion-icon {
 }
 
 :is(.dark .dark\:bg-darkAbout) {
-  background-image: url('../docs/img/website2DARK4k.png');
+  background-image: url('../img/website2DARK4k.png');
 }
 
 :is(.dark .dark\:bg-darkHome) {
-  background-image: url('../docs/img/websiteDARK4k.png');
+  background-image: url('../img/websiteDARK4k.png');
 }
 
 :is(.dark .dark\:bg-darkProjects) {
-  background-image: url('../docs/img/website3DARK4k.png');
+  background-image: url('../img/website3DARK4k.png');
 }
 
 :is(.dark .dark\:text-gray-100) {
