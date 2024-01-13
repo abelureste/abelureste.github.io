@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>abels portfolio</title>
+  <link rel="icon" href="img/tabPic.png">
+</head>
+
+<body>
+
+  <section class="bg-gray-50 dark:bg-gray-800">
+    <div class="flex px-4 sm:px-12 py-10 sm:pb-4 sm:pt-12 h-screen">
+      <div class="absolute p-4">
+        <button onclick="(() => document.body.classList.toggle('dark'))()"
+          class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+          <svg class="fill-violet-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+      </button>
+      </div>
+      <div class="h-full w-full flex justify-center sm:justify-normal items-center rounded-3xl bg-white dark:bg-gray-700 bg-lightHome bg-cover bg-top dark:bg-darkHome">
+        <div class="px-8 py-12 flex-col">
+          <h1 class=" mt-auto text-5xl sm:text-8xl w-full font-bold text-space-cadet dark:text-white">
+            Hi,
+          </h1>
+          <h1 class="animate-typing overflow-hidden whitespace-nowrap mt-auto text-5xl sm:text-8xl w-fit font-bold text-space-cadet dark:text-white">
+            I'm Abel.
+          </h1>
+          <h2 class="mt-2 pl-2 text-2xl sm:text-4xl text-space-cadet dark:text-white">
+            junior developer & student
+          </h2>
+          <div class="mt-6 w-full justify-center sm:justify-normal inline-flex">
+            <button class="w-24 xs:w-36 h-14 flex items-center justify-center xs:text-lg text-space-cadet  bg-yellow-300 rounded-2xl shadow-md hover:bg-yellow-400 transition duration-300 ease-in-out focus:outline-none">
+              resume <ion-icon name="download-outline" class="ml-2"></ion-icon>
+            </button>
+            <a href="projects.html">
+              <button class="ml-4 w-24 xs:w-36 h-14 flex items-center justify-center xs:text-lg text-space-cadet bg-yellow-200 rounded-2xl shadow-md hover:bg-yellow-300 transition duration-300 ease-in-out focus:outline-none">
+                projects <ion-icon name="arrow-forward-outline" class="ml-2"></ion-icon>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sm:grid sm:grid-cols-2">
+    <section class="bg-gray-50 dark:bg-gray-800 w-full">
+      <div class="flex items-center justify-center px-4 sm:pl-12 py-10 sm:py-4 w-full sm:h-full">
+        <div class=" h-full w-full flex items-center bg-white dark:bg-gray-700 rounded-3xl">
+          <div class="px-8 py-20 flex-col">
+            <h1 class="mt-auto text-center text-xl xs:text-4xl w-full font-bold text-space-cadet dark:text-white">
+              I'm a computer science student studying at the University of North Georgia.
+            </h1>
+            <div class="flex w-full justify-center">
+              <a href="aboutme.html">
+                <button class="mt-6 w-24 xs:w-36 h-14 flex items-center justify-center xs:text-lg text-space-cadet bg-yellow-200 rounded-2xl shadow-md hover:bg-yellow-300 transition duration-300 ease-in-out focus:outline-none">
+                about me <ion-icon name="arrow-forward-outline" class="ml-2"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-800 w-full">
+      <div class="flex items-center justify-center px-4 sm:pr-12 py-10 sm:py-4 w-full sm:h-full">
+        <div class=" h-full w-full flex items-center bg-white dark:bg-gray-700 rounded-3xl">
+          <div class="px-8 py-20 flex-col">
+            <h1 class="mt-auto text-xl xs:text-5xl w-full underline xs:decoration-4 decoration-dotted underline-offset-4 font-bold text-space-cadet dark:text-gray-100">
+            Languages
+            </h1>
+            <h2 class="mt-4 text-xl xs:text-5xl w-full text-space-cadet dark:text-white">
+              Python <br> Java <br> HTML <br> CSS <br> PowerShell <h1 class="xs:text-2xl xs:px-1 text-space-cadet dark:text-white">and constantly learning...</h1>
+            </h2>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-800">
+      <div class="flex items-center justify-center px-4 sm:pl-12 py-10 sm:py-4 w-full sm:h-full">
+        <div class=" h-full w-full  flex items-center bg-white dark:bg-gray-700 rounded-3xl">
+          <div class="px-8 py-20 flex-col">
+            <h1 class="mt-auto text-xl xs:text-5xl w-full underline xs:decoration-4 decoration-dotted underline-offset-4 font-bold text-space-cadet dark:text-white">
+            Tools
+            </h1>
+            <h2 class="mt-4 text-xl xs:text-5xl w-full text-space-cadet dark:text-white">
+              VS Code <br> Git <br> TailwindCSS <br> <h1 class="xs:text-2xl xs:px-1 text-space-cadet dark:text-white">and constantly learning...</h1>
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-800">
+      <div class="flex items-center justify-center px-4 sm:pr-12 py-10 sm:py-4 w-full sm:h-full">
+        <div class=" h-full w-full flex items-center justify-center bg-white dark:bg-gray-700 rounded-3xl">
+          <div class="px-8 py-20 flex-col">
+            <h1 class="mt-auto text-xl xs:text-5xl w-full text-center font-bold text-space-cadet dark:text-white">
+              Connect with me
+            </h1>
+            <div class="mt-8 w-full justify-center text-center flex-col sm:flex-row sm:flex-wrap">
+              <a href="mailto:aureste03@gmail.com">
+                <button class="px-5 h-14 text-sm xs:text-lg bg-yellow-200 rounded-2xl shadow-md hover:bg-yellow-300 transition duration-300 ease-in-out">
+                  aureste03@gmail.com
+                </button>
+              </a>
+              <div class="mt-6 w-full xs:w-3/4 xl:w-4/6 justify-between inline-flex">
+                <a target="_blank" href="https://github.com/abelureste">
+                  <button class="w-14 h-14 flex items-center justify-center bg-yellow-200 rounded-2xl shadow-md hover:bg-yellow-300 transition duration-300 ease-in-out">
+                    <ion-icon name="logo-github" size="large"></ion-icon>
+                  </button>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/abelureste/">
+                  <button class="w-14 h-14 flex items-center justify-center bg-yellow-200 rounded-2xl shadow-md hover:bg-yellow-300 transition duration-300 ease-in-out">
+                    <ion-icon name="logo-instagram" size="large"></ion-icon>
+                  </button>
+                </a>
+                <a>
+                  <button class="w-14 h-14 flex items-center justify-center bg-yellow-200 rounded-2xl shadow-md hover:bg-yellow-300 transition duration-300 ease-in-out">
+                    <ion-icon name="logo-linkedin" size="large"></ion-icon>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="bg-gray-50 dark:bg-gray-800">
+    <div class="flex items-center justify-center px-4 sm:px-12 sm:pb-4 py-10 sm:py-4 w-full sm:h-full">
+      <div class="h-full w-full flex items-center justify-center bg-white dark:bg-gray-700 rounded-3xl">
+        <div class="py-20 flex-col w-full">
+          <div class="p-4 md:p-8">
+              <h1 class="mt-auto text-xl xs:text-5xl w-full text-center font-bold text-space-cadet dark:text-white">
+                Contact me
+              </h1>
+              <form class="flex flex-col items-center pt-4">
+                  <div class="md:w-3/4 lg:w-2/3 xl:w-1/2">
+                      <div class="flex flex-col md:flex-row">
+                          <input id="name" type="text"
+                              class="my-2 py-2 px-4 rounded-md bg-gray-50 text-gray-500 w-full md:w-1/2 md:mr-2 outline-none focus:ring-2 focus:ring-space-cadet"
+                              placeholder="Name">
+                          <input id="email" type="email"
+                              class="my-2 py-2 px-4 rounded-md bg-gray-50 text-gray-500 w-full md:w-1/2 md:ml-2 outline-none focus:ring-2 focus:ring-space-cadet"
+                              placeholder="Email">
+                      </div>
+                      <input id="subject" type="text" placeholder="Subject"
+                          class="my-2 py-2 px-4 rounded-md bg-gray-50 text-gray-500 w-full outline-none focus:ring-2 focus:ring-space-cadet">
+                      <textarea id="message" rows="5" placeholder="'You're so cool, please work for me!!' - or something like that"
+                        class="my-2 py-2 px-4 rounded-md bg-gray-50 text-gray-500 w-full outline-none focus:ring-2 focus:ring-space-cadet"></textarea>
+                  </div>
+                  <button
+                    class="text-md mt-5 rounded-md py-2 px-4 bg-yellow-200 hover:bg-yellow-300 text-space-cadet shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-200">
+                    Send Message
+                  </button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="bg-gray-50 dark:bg-gray-800">
+    <div class="flex w-full pt-4 px-4 sm:px-12 h-20">
+      <div class="grid grid-cols-2 w-full pb-8 bg-white dark:bg-gray-700 rounded-t-3xl">
+        <h2 class="w-full mt-8 pl-4 sm:pl-12 text-sm text-gray-500 dark:text-white">
+          created by Abel Ureste, 2024
+        </h2>
+        <h2 class="w-full text-right mt-8 pr-4 sm:pr-12 text-sm text-gray-500 dark:text-white">
+          aureste03@gmail.com
+        </h2>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
