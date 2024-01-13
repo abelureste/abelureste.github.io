@@ -14,14 +14,14 @@ module.exports = {
       screens: {
         'xs': '330px',
       },
-      backgroundImage: {
+      backgroundImage: theme => ({
         'lightHome': "url('../docs/img/websiteLIGHT4k.png')",
         'darkHome': "url('../docs/img/websiteDARK4k.png')",
         'lightAbout': "url('../docs/img/website2LIGHT4k.png')",
         'darkAbout': "url('../docs/img/website2DARK4k.png')",
         'lightProjects': "url('../docs/img/website3LIGHT4k.png')",
         'darkProjects': "url('../docs/img/website3DARK4k.png')",
-      },
+      }),
       keyframes: {
         typing: {
           "0%": {
