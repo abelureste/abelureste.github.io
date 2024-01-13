@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./dist/*.{html,jsx}"],
+  content: ["./docs/*.{html,jsx}"],
   darkMode: 'class',
   theme: {
     extend: {
@@ -15,12 +15,12 @@ module.exports = {
         'xs': '330px',
       },
       backgroundImage: {
-        'lightHome': "url('../dist/img/websiteLIGHT4k.png')",
-        'darkHome': "url('../dist/img/websiteDARK4k.png')",
-        'lightAbout': "url('../dist/img/website2LIGHT4k.png')",
-        'darkAbout': "url('../dist/img/website2DARK4k.png')",
-        'lightProjects': "url('../dist/img/website3LIGHT4k.png')",
-        'darkProjects': "url('../dist/img/website3DARK4k.png')",
+        'lightHome': "url('../docs/img/websiteLIGHT4k.png')",
+        'darkHome': "url('../docs/img/websiteDARK4k.png')",
+        'lightAbout': "url('../docs/img/website2LIGHT4k.png')",
+        'darkAbout': "url('../docs/img/website2DARK4k.png')",
+        'lightProjects': "url('../docs/img/website3LIGHT4k.png')",
+        'darkProjects': "url('../docs/img/website3DARK4k.png')",
       },
       keyframes: {
         typing: {
