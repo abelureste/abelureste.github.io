@@ -15,7 +15,7 @@ module.exports = {
         'xs': '330px',
       },
       backgroundImage: theme => ({
-        'lightHome': "url('../img/websiteLIGHT4k.png')",
+        'lightHome': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/websiteLIGHT4k.png')",
         'darkHome': "url('../img/websiteDARK4k.png')",
         'lightAbout': "url('../img/website2LIGHT4k.png')",
         'darkAbout': "url('../img/website2DARK4k.png')",
