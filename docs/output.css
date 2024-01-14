@@ -731,7 +731,7 @@ video {
 }
 
 .bg-lightAbout {
-  background-image: url('../img/website2LIGHT4k.png');
+  background-image: url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website2LIGHT4k.png');
 }
 
 .bg-lightHome {
@@ -739,7 +739,7 @@ video {
 }
 
 .bg-lightProjects {
-  background-image: url('../img/website3LIGHT4k.png');
+  background-image: url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website3LIGHT4k.png');
 }
 
 .bg-cover {
@@ -974,15 +974,15 @@ ion-icon {
 }
 
 :is(.dark .dark\:bg-darkAbout) {
-  background-image: url('../img/website2DARK4k.png');
+  background-image: url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website2DARK4k.png');
 }
 
 :is(.dark .dark\:bg-darkHome) {
-  background-image: url('../img/websiteDARK4k.png');
+  background-image: url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/websiteDARK4k.png');
 }
 
 :is(.dark .dark\:bg-darkProjects) {
-  background-image: url('../img/website3DARK4k.png');
+  background-image: url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website3DARK4k.png');
 }
 
 :is(.dark .dark\:text-gray-100) {

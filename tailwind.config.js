@@ -16,11 +16,11 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'lightHome': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/websiteLIGHT4k.png')",
-        'darkHome': "url('../img/websiteDARK4k.png')",
-        'lightAbout': "url('../img/website2LIGHT4k.png')",
-        'darkAbout': "url('../img/website2DARK4k.png')",
-        'lightProjects': "url('../img/website3LIGHT4k.png')",
-        'darkProjects': "url('../img/website3DARK4k.png')",
+        'darkHome': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/websiteDARK4k.png')",
+        'lightAbout': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website2LIGHT4k.png')",
+        'darkAbout': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website2DARK4k.png')",
+        'lightProjects': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website3LIGHT4k.png')",
+        'darkProjects': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/website3DARK4k.png')",
       }),
       keyframes: {
         typing: {
