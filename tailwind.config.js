@@ -13,6 +13,7 @@ module.exports = {
       },
       screens: {
         'xs': '330px',
+        '3xl': '1720px',
       },
       backgroundImage: theme => ({
         'lightHome': "url('https://raw.githubusercontent.com/abelureste/abelureste.github.io/main/docs/img/websiteLIGHT4k.png')",
