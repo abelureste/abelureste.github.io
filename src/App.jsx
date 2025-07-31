@@ -13,7 +13,6 @@ import BarWebsiteProject from '../components/BarWebsiteProject';
 function App() {
   return (
     <Router>
-      <div className='container'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/personal-introduction" element={<PersonalIntroduction />} />
@@ -23,7 +22,6 @@ function App() {
         <Route path="/projects/personal-website" element={<PersonalWebsiteProject />} />
         <Route path="/projects/bar-website" element={<BarWebsiteProject />} />
       </Routes>
-      </div>
     </Router>
   );
 }
