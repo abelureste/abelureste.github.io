@@ -12,7 +12,7 @@ import BarWebsiteProject from '../components/BarWebsiteProject';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/abelureste.github.io/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/personal-introduction" element={<PersonalIntroduction />} />
