@@ -20,23 +20,23 @@ const Home = () => {
         </div>
         <div className="row justify-content-center px-4">
           <div className="d-grid gap-2 gap-sm-4" style={{ width: '800px', padding: '0px' }}>
-            <a href="/src/assets/Abel Ureste Resume.docx" className="btn btn-dark shadow">Download Resume</a>
-            <Link to="/personal-introduction" className="btn btn-dark shadow">Personal Introduction</Link>
-            <Link to="/projects" className="btn btn-dark shadow">Projects</Link>
+            <a href="/src/assets/Abel Ureste Resume.docx" className="item-sm btn btn-dark shadow">Download Resume</a>
+            <Link to="/personal-introduction" className="item-sm btn btn-dark shadow">Personal Introduction</Link>
+            <Link to="/projects" className="item-sm btn btn-dark shadow">Projects</Link>
           </div>
           <div className="row justify-content-center text-center pt-2 pt-sm-4" style={{ width: '400px' }}>
             <div className="col">
-              <a className="btn btn-dark shadow" href="mailto:aureste03@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a className="item-sm btn btn-dark shadow" href="mailto:aureste03@gmail.com" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
             </div>
             <div className="col">
-              <a className="btn btn-dark shadow" href="https://github.com/abelureste" target="_blank" rel="noopener noreferrer">
+              <a className="item-sm btn btn-dark shadow" href="https://github.com/abelureste" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} size="lg" />
               </a>
             </div>
             <div className="col">
-              <a className="btn btn-dark shadow" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+              <a className="item-sm btn btn-dark shadow" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>

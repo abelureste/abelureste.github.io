@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import homelabPic1 from '../src/assets/homelabPic1.jpg';
 import homelabPic2 from '../src/assets/homelabPic2.jpg';
 import homelabPic3 from '../src/assets/homelabPic3.jpg';
 import homelabPic4 from '../src/assets/homelabPic4.jpg';
 
 const HomelabProject = () => {
+  const images = [homelabPic1, homelabPic2, homelabPic3, homelabPic4];
+  const [rotation, setRotation] = useState(0);
+
+  const nextImage = () => {
+    setRotation((prevRotation) => prevRotation - 90);
+  };
+
+  const prevImage = () => {
+    setRotation((prevRotation) => prevRotation + 90);
+  };
+
+  const imagePositions = [
+    { rotateY: 0, translateZ: 325 },   // Front
+    { rotateY: 90, translateZ: 325 },  // Right
+    { rotateY: 180, translateZ: 325 }, // Back
+    { rotateY: -90, translateZ: 325 }, // Left
+  ];
+
   return (
     <div className="pb-5">
       <nav className="navbar">
@@ -14,34 +33,38 @@ const HomelabProject = () => {
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-        <div>
+        <div className="pb-3">
           <h1>Personal Home Lab</h1>
           <h5>I needed to practice my networking skills, so I made my own home lab.</h5>
+          <hr />
         </div>
-        <hr />
-        <div id="carousel" className="carousel slide pb-4">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={homelabPic1} className="d-block w-100" alt="Homelab front" />
+        <div className="position-relative">
+            <div className="carousel-container my-5 pb-4">
+                <motion.div
+                className="carousel"
+                animate={{ rotateY: rotation }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                >
+                {images.map((src, i) => (
+                    <motion.img
+                    key={i}
+                    src={src}
+                    className="carousel-image"
+                    style={{
+                        transform: `rotateY(${imagePositions[i].rotateY}deg) translateZ(${imagePositions[i].translateZ}px)`,
+                    }}
+                    />
+                ))}
+                </motion.div>
             </div>
-            <div className="carousel-item">
-              <img src={homelabPic2} className="d-block w-100" alt="Homelab side" />
-            </div>
-            <div className="carousel-item">
-              <img src={homelabPic3} className="d-block w-100" alt="Homelab close up" />
-            </div>
-            <div className="carousel-item">
-              <img src={homelabPic4} className="d-block w-100" alt="Proxmox dashboard" />
-            </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
+            <button className="carousel-control-prev" type="button" onClick={prevImage}>
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" onClick={nextImage}>
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
         </div>
         <h5>Why make a home lab?</h5>
         <p>Simply put, I wanted to put what I’d been learning in my networking and cybersecurity classes into practice. I figured the best way to get hands-on experience with managing and manipulating computers over a network was to build my own. Over the course of a few months, I dove into forums, reading up on the hardware and software people were using in their personal homelabs. I took notes, compared setups, and—with a student budget in mind—set out to build something both practical and affordable.</p>

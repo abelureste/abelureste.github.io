@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import piFramePic1 from '../src/assets/piFramePic1.jpg';
 import piFramePic2 from '../src/assets/piFramePic2.jpg';
 import piFramePic3 from '../src/assets/piFramePic3.jpg';
 
 const PiFrameProject = () => {
+  const images = [piFramePic1, piFramePic2, piFramePic3, piFramePic2]; // Using 4 images for a rectangle
+  const [rotation, setRotation] = useState(0);
+
+  const nextImage = () => {
+    setRotation((prevRotation) => prevRotation - 90);
+  };
+
+  const prevImage = () => {
+    setRotation((prevRotation) => prevRotation + 90);
+  };
+
+  // Positions for each image to form a rectangle in 3D space
+  const imagePositions = [
+    { rotateY: 0, translateZ: 325 },   // Front
+    { rotateY: 90, translateZ: 325 },  // Right
+    { rotateY: 180, translateZ: 325 }, // Back
+    { rotateY: -90, translateZ: 325 }, // Left
+  ];
+
   return (
     <div className="pb-5">
       <nav className="navbar">
@@ -13,28 +33,35 @@ const PiFrameProject = () => {
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-        <div>
+        <div className="pb-3">
           <h1>RaspberryPi Picture Frame</h1>
           <h5>Have you ever seen those fancy digital picture frame things? Well I decided to make one myself.</h5>
+          <hr/>
         </div>
-        <hr />
-        <div id="carousel" className="carousel slide pb-4">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={piFramePic1} className="d-block w-100" alt="Pi Frame front" />
-            </div>
-            <div className="carousel-item">
-              <img src={piFramePic2} className="d-block w-100" alt="Pi Frame back" />
-            </div>
-            <div className="carousel-item">
-              <img src={piFramePic3} className="d-block w-100" alt="Pi Frame close up" />
-            </div>
+        <div className="position-relative">
+          <div className="carousel-container my-5 pb-4">
+            <motion.div
+              className="carousel"
+              animate={{ rotateY: rotation }}
+              transition={{ duration: 0.8, ease: 'easeInOut' }}
+            >
+              {images.map((src, i) => (
+                <motion.img
+                  key={i}
+                  src={src}
+                  className="carousel-image"
+                  style={{
+                    transform: `rotateY(${imagePositions[i].rotateY}deg) translateZ(${imagePositions[i].translateZ}px)`,
+                  }}
+                />
+              ))}
+            </motion.div>
           </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <button className="carousel-control-prev" type="button" onClick={prevImage}>
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Previous</span>
           </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <button className="carousel-control-next" type="button" onClick={nextImage}>
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
@@ -61,6 +88,6 @@ const PiFrameProject = () => {
       </div>
     </div>
   );
-}
+};
 
 export default PiFrameProject;

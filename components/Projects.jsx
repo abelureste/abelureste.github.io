@@ -27,7 +27,7 @@ const Projects = () => {
     },
     {
       title: "Personal Website",
-      description: "The site you are Browse right now",
+      description: "The site you are browsing right now.",
       link: "/projects/personal-website",
       image: personalsitePic
     },
