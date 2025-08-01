@@ -8,7 +8,6 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
   const location = useLocation();
-  // 👇 2. Use state to manage direction, initializing from the location
   const [direction, setDirection] = useState(location.state?.direction);
 
   const pageVariants = {
@@ -22,7 +21,6 @@ const Home = () => {
       transition: { duration: 0.5, ease: 'easeInOut' },
     },
     exit: {
-      // The exit variant will now use the up-to-date 'direction' from state
       y: direction === 'down' ? '-100vh' : '100vh',
       opacity: 0,
       transition: { duration: 0.5, ease: 'easeInOut' },
@@ -44,7 +42,7 @@ const Home = () => {
               <img src={homepic} style={{ width: '300px' }} className="shadow rounded img-fluid" alt="Abel Ureste" />
             </div>
             <div className="col-sm d-flex flex-column justify-content-center me-sm-4 px-4 px-sm-2 text-sm-start text-center">
-              <h2>Welcome, I'm Abel. <br />A Developer. </h2>
+              <h2 style={{ fontWeight: '600' }}>Welcome, I'm Abel. <br />A Developer. </h2>
               <p>I am intriguted in all things computer, from software development, to networks, to tinkering with hardware.</p>
             </div>
           </div>

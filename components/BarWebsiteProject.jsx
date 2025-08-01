@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import barwebsitePic1 from '../src/assets/barwebsitePic1.png';
 import barwebsitePic2 from '../src/assets/barwebsitePic2.png';
 import barwebsitePic3 from '../src/assets/barwebsitePic3.png';
@@ -59,7 +59,7 @@ const BarWebsiteProject = () => {
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="pb-3">
-          <h1>Bar Website</h1>
+          <h1 style={{ fontWeight: '600' }}>Bar Website</h1>
           <h5>My workplace lacked an online presence, so I created a website.</h5>
           <hr />
         </div>

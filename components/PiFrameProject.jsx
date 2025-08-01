@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import piFramePic1 from '../src/assets/piFramePic1.jpg';
 import piFramePic2 from '../src/assets/piFramePic2.jpg';
 import piFramePic3 from '../src/assets/piFramePic3.jpg';
@@ -59,7 +59,7 @@ const PiFrameProject = () => {
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="pb-3">
-          <h1>RaspberryPi Picture Frame</h1>
+          <h1 style={{ fontWeight: '600' }}>RaspberryPi Picture Frame</h1>
           <h5>Have you ever seen those fancy digital picture frame things? Well I decided to make one myself.</h5>
           <hr/>
         </div>

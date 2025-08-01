@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const PersonalWebsiteProject = () => {
     const location = useLocation();
@@ -39,7 +38,7 @@ const PersonalWebsiteProject = () => {
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div>
-          <h1>Personal Website</h1>
+          <h1 style={{ fontWeight: '600' }}>Personal Website</h1>
           <h5>Get to know me and my skills better.</h5>
         </div>
         <hr />

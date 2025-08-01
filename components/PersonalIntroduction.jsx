@@ -1,11 +1,11 @@
-import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-// Import images used in this component
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJava, faPython, faHtml5, faCss3, faWindows, faLinux, faGit, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faDesktop, faFlask, faScroll } from '@fortawesome/free-solid-svg-icons';
+
 import personalintro1 from '../src/assets/personalintro1.JPG';
-import personalintro2 from '../src/assets/personalintro2.JPG';
-import personalintro3 from '../src/assets/personalintro3.JPG';
 import personalintro4 from '../src/assets/personalintro4.JPG';
 
 const PersonalIntroduction = () => {
@@ -30,24 +30,25 @@ const PersonalIntroduction = () => {
   };
 
   const languages = [
-    { name: 'Java', icon: 'fa-brands fa-java' },
-    { name: 'Python', icon: 'fa-brands fa-python' },
-    { name: 'HTML', icon: 'fa-brands fa-html5' },
-    { name: 'CSS', icon: 'fa-brands fa-css' },
-    { name: 'SQL', icon: 'fa-solid fa-database' }
+    { name: 'Java', icon: faJava },
+    { name: 'Python', icon: faPython },
+    { name: 'JavaScript', icon: faScroll },
+    { name: 'HTML', icon: faHtml5 },
+    { name: 'CSS', icon:faCss3 },
+    { name: 'SQL', icon: faDatabase }
   ];
 
   const systems = [
-    { name: 'Windows', icon: 'fa-brands fa-windows' },
-    { name: 'Linux', icon: 'fa-brands fa-linux' },
-    { name: 'Unix', icon: 'fa-solid fa-desktop' }
+    { name: 'Windows', icon: faWindows },
+    { name: 'Linux', icon: faLinux },
+    { name: 'Unix', icon: faDesktop }
   ];
 
   const technologies = [
-    { name: 'Git', icon: 'fa-brands fa-git' },
-    { name: 'Flask', icon: 'fa-solid fa-flask' },
-    { name: 'Docker', icon: 'fa-brands fa-docker' },
-    { name: 'MySQL', icon: 'fa-solid fa-database' }
+    { name: 'Git', icon: faGit },
+    { name: 'Flask', icon: faFlask },
+    { name: 'Docker', icon: faDocker },
+    { name: 'MySQL', icon: faDatabase }
   ];
 
 
@@ -67,34 +68,13 @@ const PersonalIntroduction = () => {
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div>
-          <h1>Personal Introduction</h1>
+          <h1 style={{ fontWeight: '600' }}>Personal Introduction</h1>
           <h5>Learn a little bit about me, professionally and personally</h5>
         </div>
         <hr />
         <div className="row align-items-center">
           <div className="col">
-            {/* Carousel 1 */}
-            <div id="carousel1" className="carousel slide">
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <img src={personalintro1} className="d-block w-100" alt="Introduction 1" />
-                </div>
-                <div className="carousel-item">
-                  <img src={personalintro2} className="d-block w-100" alt="Introduction 2" />
-                </div>
-                <div className="carousel-item">
-                  <img src={personalintro3} className="d-block w-100" alt="Introduction 3" />
-                </div>
-              </div>
-              <button className="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
+            <img src={personalintro1} className="d-block w-100" alt="Introduction 1" />
           </div>
           <div className="col-sm-8 pt-4 pt-sm-0">
             <h5>Let me introduce myself</h5>
@@ -110,19 +90,19 @@ const PersonalIntroduction = () => {
             <div className="col-sm text-center py-2 py-sm-0">
                 <h5>Languages</h5>
                 {languages.map(skill => (
-                    <div key={skill.name} className="skill rounded item-sm"><i className={skill.icon}></i> {skill.name}</div>
+                    <div key={skill.name} className="skill rounded item-sm"><FontAwesomeIcon icon={skill.icon} /> {skill.name}</div>
                 ))}
             </div>
             <div className="col-sm text-center py-2 py-sm-0">
                 <h5>Systems</h5>
                 {systems.map(skill => (
-                    <div key={skill.name} className="skill rounded item-sm"><i className={skill.icon}></i> {skill.name}</div>
+                    <div key={skill.name} className="skill rounded item-sm"><FontAwesomeIcon icon={skill.icon} /> {skill.name}</div>
                 ))}
             </div>
             <div className="col-sm text-center py-2 py-sm-0">
                 <h5>Technologies</h5>
                 {technologies.map(skill => (
-                    <div key={skill.name} className="skill rounded item-sm"><i className={skill.icon}></i> {skill.name}</div>
+                    <div key={skill.name} className="skill rounded item-sm"><FontAwesomeIcon icon={skill.icon} /> {skill.name}</div>
                 ))}
             </div>
         </div>
@@ -134,34 +114,13 @@ const PersonalIntroduction = () => {
               <li>Weight lifting / Running</li>
               <li>Cooking / Barbecuing</li>
               <li>Traveling / Photography</li>
-              <li>Collecting Indoor Plants</li>
+              <li>Collecting Plants</li>
+              <li>Playing with my dog, Chewy!</li>
             </ul>
             <p>Admittedly I have many more interests that I want to explore, but the hobbies listed above are what I can always generally fit in my schedule. Outside of working with computers, I try to limit my screen time to stay grounded, although I do enjoy the occasional videogame. I find that technology nowadays is geared toward grabbing our attention and making it hard to let go, which is not good for the human psyche.</p>
           </div>
           <div className="col">
-            {/* Carousel 2 */}
-            <div id="carousel2" className="carousel slide pb-4">
-              <div className="carousel-inner">
-                <div className="carousel-item active">
-                  <img src={personalintro4} className="d-block w-100" alt="Hobby 1" />
-                </div>
-                {/* You can add more images to the second carousel here if you want */}
-                <div className="carousel-item">
-                  <img src={personalintro4} className="d-block w-100" alt="Hobby 2" />
-                </div>
-                <div className="carousel-item">
-                  <img src={personalintro4} className="d-block w-100" alt="Hobby 3" />
-                </div>
-              </div>
-              <button className="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
+            <img src={personalintro4} className="d-block w-100" alt="Hobby 1" />
           </div>
         </div>
       </div>

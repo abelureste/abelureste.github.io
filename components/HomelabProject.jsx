@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import homelabPic1 from '../src/assets/homelabPic1.jpg';
 import homelabPic2 from '../src/assets/homelabPic2.jpg';
 import homelabPic3 from '../src/assets/homelabPic3.jpg';
@@ -60,7 +60,7 @@ const HomelabProject = () => {
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="pb-3">
-          <h1>Personal Home Lab</h1>
+          <h1 style={{ fontWeight: '600' }}>Personal Home Lab</h1>
           <h5>I needed to practice my networking skills, so I made my own home lab.</h5>
           <hr />
         </div>

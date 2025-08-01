@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useState } from 'react'; // 👈 1. Import useState
+import { useState } from 'react';
 import piFramePic from '../src/assets/piFramePic1SQUARE.jpg';
 import homelabPic from '../src/assets/homelab.jpg';
 import sakemamaPic from '../src/assets/sakemama.png';
@@ -9,7 +9,6 @@ import isometricgamePic from '../src/assets/isometricgame.png';
 
 const Projects = () => {
   const location = useLocation();
-  // 👇 2. Use state to manage direction, initializing from the location
   const [direction, setDirection] = useState(location.state?.direction);
 
   const pageVariants = {
@@ -23,7 +22,6 @@ const Projects = () => {
       transition: { duration: 0.5, ease: 'easeInOut' },
     },
     exit: {
-      // The exit variant will now use the up-to-date 'direction' from state
       y: direction === 'down' ? '-100vh' : '100vh',
       opacity: 0,
       transition: { duration: 0.5, ease: 'easeInOut' },
@@ -51,7 +49,7 @@ const Projects = () => {
     },
     {
       title: "Personal Website",
-      description: "The site you are Browse right now.",
+      description: "The site you are browsing right now.",
       link: "/projects/personal-website",
       image: personalsitePic
     },
@@ -69,12 +67,11 @@ const Projects = () => {
       initial="initial"
       animate="animate"
       exit="exit"
-      custom={direction} // Pass direction as a custom prop
+      custom={direction}
     >
       <div>
         <nav className="navbar">
           <div className="container-fluid justify-content-center">
-            {/* 👇 3. Add onClick to update the direction state */}
             <Link className="navbar-brand" to="/" state={{ direction: 'up' }} onClick={() => setDirection('up')}>
               ⮤ return to home
             </Link>
@@ -89,10 +86,9 @@ const Projects = () => {
                 </div>
                 <div className="col">
                   <div className="row pt-3">
-                    <h2>{project.title}</h2>
+                    <h2 style={{ fontWeight: '600' }}>{project.title}</h2>
                     <p>{project.description}</p>
                   </div>
-                  {/* 👇 4. Add onClick here as well */}
                   <Link className="btn btn-dark" to={project.link} state={{ direction: 'down' }} onClick={() => setDirection('down')}>
                     view write-up →
                   </Link>
