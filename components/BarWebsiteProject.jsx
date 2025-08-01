@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import barwebsitePic1 from '../src/assets/barwebsitePic1.png';
 import barwebsitePic2 from '../src/assets/barwebsitePic2.png';
@@ -8,6 +8,25 @@ import barwebsitePic3 from '../src/assets/barwebsitePic3.png';
 const BarWebsiteProject = () => {
     const images = [barwebsitePic1, barwebsitePic2, barwebsitePic3, barwebsitePic2];
     const [rotation, setRotation] = useState(0);
+    const location = useLocation();
+    const direction = location.state?.direction;
+
+    const pageVariants = {
+        initial: {
+        y: direction === 'down' ? '100vh' : '-100vh',
+        opacity: 0,
+        },
+        animate: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.5, ease: 'easeInOut' },
+        },
+        exit: {
+        y: direction === 'up' ? '-100vh' : '100vh',
+        opacity: 0,
+        transition: { duration: 0.5, ease: 'easeInOut' },
+        },
+    };
 
     const nextImage = () => {
         setRotation((prevRotation) => prevRotation - 90);
@@ -25,6 +44,13 @@ const BarWebsiteProject = () => {
   ];
 
   return (
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={direction}
+    >
     <div className="pb-5">
       <nav className="navbar">
         <div className="container-fluid">
@@ -69,6 +95,7 @@ const BarWebsiteProject = () => {
         <p>In today's age, if your business doesn't have an online presence, it might as well not exist. A simple website is all it takes to let people know what your business is about. In this case, the bar that I have worked at part-time during my college career lacked a real online presence. Before this website, an outdated facebook page and a dead instagram account was all that let people know this business was legit. If you looked up a place and saw nothing about it would you be inclined to go? There was also no good way to accept job applications and bookings for private events.</p>
       </div>
     </div>
+    </motion.div>
   );
 }
 

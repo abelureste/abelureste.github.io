@@ -1,13 +1,32 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import piFramePic1 from '../src/assets/piFramePic1.jpg';
 import piFramePic2 from '../src/assets/piFramePic2.jpg';
 import piFramePic3 from '../src/assets/piFramePic3.jpg';
 
 const PiFrameProject = () => {
-  const images = [piFramePic1, piFramePic2, piFramePic3, piFramePic2]; // Using 4 images for a rectangle
+  const images = [piFramePic1, piFramePic2, piFramePic3, piFramePic2];
   const [rotation, setRotation] = useState(0);
+  const location = useLocation();
+  const direction = location.state?.direction;
+
+  const pageVariants = {
+    initial: {
+      y: direction === 'down' ? '100vh' : '-100vh',
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+    exit: {
+      y: direction === 'up' ? '-100vh' : '100vh',
+      opacity: 0,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+  };
 
   const nextImage = () => {
     setRotation((prevRotation) => prevRotation - 90);
@@ -17,19 +36,25 @@ const PiFrameProject = () => {
     setRotation((prevRotation) => prevRotation + 90);
   };
 
-  // Positions for each image to form a rectangle in 3D space
   const imagePositions = [
-    { rotateY: 0, translateZ: 325 },   // Front
-    { rotateY: 90, translateZ: 325 },  // Right
-    { rotateY: 180, translateZ: 325 }, // Back
-    { rotateY: -90, translateZ: 325 }, // Left
+    { rotateY: 0, translateZ: 325 },
+    { rotateY: 90, translateZ: 325 },
+    { rotateY: 180, translateZ: 325 },
+    { rotateY: -90, translateZ: 325 },
   ];
 
   return (
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={direction}
+    >
     <div className="pb-5">
       <nav className="navbar">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/projects">← return to projects</Link>
+          <Link className="navbar-brand" to="/projects" state={{ direction: 'up' }}>← return to projects</Link>
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
@@ -87,6 +112,7 @@ const PiFrameProject = () => {
         <a href="https://github.com/abelureste/raspiFrame" target="_blank" rel="noopener noreferrer">Click here for this project's GitHub repo.</a>
       </div>
     </div>
+    </motion.div>
   );
 };
 

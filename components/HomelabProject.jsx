@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import homelabPic1 from '../src/assets/homelabPic1.jpg';
 import homelabPic2 from '../src/assets/homelabPic2.jpg';
@@ -9,6 +9,25 @@ import homelabPic4 from '../src/assets/homelabPic4.jpg';
 const HomelabProject = () => {
   const images = [homelabPic1, homelabPic2, homelabPic3, homelabPic4];
   const [rotation, setRotation] = useState(0);
+  const location = useLocation();
+  const direction = location.state?.direction;
+
+  const pageVariants = {
+    initial: {
+      y: direction === 'down' ? '100vh' : '-100vh',
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+    exit: {
+      y: direction === 'up' ? '-100vh' : '100vh',
+      opacity: 0,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+  };
 
   const nextImage = () => {
     setRotation((prevRotation) => prevRotation - 90);
@@ -26,6 +45,13 @@ const HomelabProject = () => {
   ];
 
   return (
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={direction}
+    >
     <div className="pb-5">
       <nav className="navbar">
         <div className="container-fluid">
@@ -84,6 +110,7 @@ const HomelabProject = () => {
         After getting comfortable with the Pis, I added a used Dell Optiplex 3070 Micro that I picked up on eBay. I set it up as a dedicated Proxmox machine to dive deeper into Linux environments and experiment with penetration testing tools using Kali Linux. More recently, I’ve also started working with containerization—something that Proxmox makes incredibly easy to set up and manage.</p>
       </div>
     </div>
+    </motion.div>
   );
 }
 

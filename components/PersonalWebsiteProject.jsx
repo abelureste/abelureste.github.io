@@ -1,8 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const PersonalWebsiteProject = () => {
+    const location = useLocation();
+    const direction = location.state?.direction;
+
+    const pageVariants = {
+        initial: {
+        y: direction === 'down' ? '100vh' : '-100vh',
+        opacity: 0,
+        },
+        animate: {
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.5, ease: 'easeInOut' },
+        },
+        exit: {
+        y: direction === 'up' ? '-100vh' : '100vh',
+        opacity: 0,
+        transition: { duration: 0.5, ease: 'easeInOut' },
+        },
+    };
+
   return (
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={direction}
+    >
     <div className="pb-5">
       <nav className="navbar">
         <div className="container-fluid">
@@ -26,6 +54,7 @@ const PersonalWebsiteProject = () => {
         <p>Yes, that's it. I found there wasn't a need to overcomplicate this. When looking for inspiration for my personal website, I found that many sites hide vital information past many different fancy UI's, which can make navigating the site feel like a maze. I designed this site to be simple and easy to navigate, with clear headings to get my points across simply and efficiently.</p>
       </div>
     </div>
+    </motion.div>
   );
 }
 
