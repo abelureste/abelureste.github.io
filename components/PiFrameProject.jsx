@@ -92,7 +92,7 @@ const PiFrameProject = () => {
           </button>
         </div>
         <h5>Why a Picture Frame?</h5>
-        <p>For my first venture into programming hardware with software, I set out to build something I’d been wanting for a long time: a digital picture frame. This project felt like the perfect opportunity to gain hands-on experience, both in coding and assembling physical components. For anyone exploring single-board computers, displaying an image on hardware is a major milestone, and for me, it was a personal goal I was eager to achieve.</p>
+        <p>For my first venture into programming hardware with software, I set out to build something I’d been wanting for a long time: a digital picture frame. This project felt like the perfect opportunity to gain hands-on experience, both in coding and assembling physical components. For anyone exploring single board computers, displaying an image on hardware is a major milestone, and for me, it was a personal goal I was eager to achieve.</p>
         <h5>Hardware</h5>
         <p>Components:</p>
         <ul>
@@ -100,7 +100,7 @@ const PiFrameProject = () => {
           <li>Pimoroni Inky Impression 5.7"</li>
           <li>3D Printed Case designed by myself</li>
         </ul>
-        <p>While researching hardware for the project, I discovered these super cool multicolor e-ink displays made by Pimoroni. Similar to a Kindle but with color, these displays stood out for their simplicity and versatility, they’re plug-and-play with any Raspberry Pi header, which made hardware setup a breeze. One especially unique feature is that they retain the displayed image even when the Pi is powered off—perfect for when I eventually make the device wireless. Assembly was straightforward: I just plugged the screen into the Raspberry Pi, inserted a microSD card loaded with Raspberry Pi OS, and it was ready to go. To house everything, I designed a custom picture frame in CAD with a slot for the screen-and-Pi combo, then 3D printed it from the STL file.</p>
+        <p>While researching hardware for the project, I discovered these super cool multicolor e-ink displays made by Pimoroni. Similar to a Kindle but with color, these displays stood out for their simplicity and versatility, they’re plug-and-play with any Raspberry Pi header, which made hardware setup a breeze. One especially unique feature is that they retain the displayed image even when the Pi is powered off, perfect for when I eventually make the device wireless. Assembly was straightforward: I just plugged the screen into the Raspberry Pi, inserted a microSD card loaded with Raspberry Pi OS, and it was ready to go. To house everything, I designed a custom picture frame in CAD with a slot for the screen-and-Pi combo, then 3D printed it from the STL file.</p>
         <h5>Software</h5>
         <p style={{ marginBottom: '0' }}>Utilized technologies:</p>
         <ul>

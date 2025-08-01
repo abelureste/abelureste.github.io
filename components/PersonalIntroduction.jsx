@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, scale } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJava, faPython, faHtml5, faCss3, faWindows, faLinux, faGit, faDocker } from '@fortawesome/free-brands-svg-icons';
@@ -74,7 +74,18 @@ const PersonalIntroduction = () => {
         <hr />
         <div className="row align-items-center">
           <div className="col">
-            <img src={personalintro1} className="d-block w-100" alt="Introduction 1" />
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                rotate: -4,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 300,
+              }}
+            >
+              <img src={personalintro1} className="d-block w-100" alt="Introduction 1" />
+            </motion.div>
           </div>
           <div className="col-sm-8 pt-4 pt-sm-0">
             <h5>Let me introduce myself</h5>
@@ -120,7 +131,18 @@ const PersonalIntroduction = () => {
             <p>Admittedly I have many more interests that I want to explore, but the hobbies listed above are what I can always generally fit in my schedule. Outside of working with computers, I try to limit my screen time to stay grounded, although I do enjoy the occasional videogame. I find that technology nowadays is geared toward grabbing our attention and making it hard to let go, which is not good for the human psyche.</p>
           </div>
           <div className="col">
-            <img src={personalintro4} className="d-block w-100" alt="Hobby 1" />
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                rotate: 4,
+              }}
+              transition={{
+              type: 'spring',
+                stiffness: 300,
+              }}
+            >
+              <img src={personalintro4} className="d-block w-100" alt="Hobby 1" />
+            </motion.div>
           </div>
         </div>
       </div>

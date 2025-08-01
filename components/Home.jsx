@@ -39,7 +39,18 @@ const Home = () => {
         <div className="container py-5 mx-5 my-5 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
           <div className="row">
             <div className="col-sm center-div pb-4 py-sm-4 px-4">
-              <img src={homepic} style={{ width: '300px' }} className="shadow rounded img-fluid" alt="Abel Ureste" />
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
+                  rotate: -4,
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 300,
+                }}
+              >
+                <img src={homepic} style={{ width: '300px' }} className="shadow rounded img-fluid" alt="Abel Ureste" />
+              </motion.div>
             </div>
             <div className="col-sm d-flex flex-column justify-content-center me-sm-4 px-4 px-sm-2 text-sm-start text-center">
               <h2 style={{ fontWeight: '600' }}>Welcome, I'm Abel. <br />A Developer. </h2>

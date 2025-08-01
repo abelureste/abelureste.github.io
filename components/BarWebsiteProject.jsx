@@ -92,7 +92,7 @@ const BarWebsiteProject = () => {
             </button>
         </div>
         <h5>My first professional project</h5>
-        <p>In today's age, if your business doesn't have an online presence, it might as well not exist. A simple website is all it takes to let people know what your business is about. In this case, the bar that I have worked at part-time during my college career lacked a real online presence. Before this website, an outdated facebook page and a dead instagram account was all that let people know this business was legit. If you looked up a place and saw nothing about it would you be inclined to go? There was also no good way to accept job applications and bookings for private events.</p>
+        <p>In today's age, if your business doesn't have an online presence, it might as well not exist. A simple website is all it takes to let people know what your business is about. In this case, the bar that I have worked at part-time during my college career lacked a real online presence. Before this website, an outdated facebook page and a dead instagram account was all that let people know this business was legit. If you looked up a place and saw nothing about it would you be inclined to go?</p>
       </div>
     </div>
     </motion.div>

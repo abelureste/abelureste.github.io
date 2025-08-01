@@ -43,14 +43,14 @@ const PersonalWebsiteProject = () => {
         </div>
         <hr />
         <h5>Why create this site?</h5>
-        <p>It's hard to get a grasp of who I am without a little bit of a writeup. This site was created to showcase my projects, including a detailed write up of my goals with them, what it took to make them, and what I have learned. Also, I wanted to include a bit of an introduction to know me besides just my qualifications. Hopefully you learned a little bit more about me, and maybe even find my projects interesting. I'm always open to learning more, so contact me if you want to collaborate on something.</p>
+        <p>It's hard to get a grasp of who I am without a little bit of a writeup. This site was created to showcase my projects, including my goals with them, what it took to make them, and what I have learned. Also, I wanted to include an introduction to who I was alongside my qualifications. Hopefully you learned a little bit more about me, and maybe even find my projects interesting. I'm always open to learning more, so contact me if you want to collaborate on something.</p>
         <h5>What components make up this site?</h5>
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
+          <li>React + Vite</li>
+          <li>HTML/CSS</li>
           <li>Bootstrap</li>
         </ul>
-        <p>Yes, that's it. I found there wasn't a need to overcomplicate this. When looking for inspiration for my personal website, I found that many sites hide vital information past many different fancy UI's, which can make navigating the site feel like a maze. I designed this site to be simple and easy to navigate, with clear headings to get my points across simply and efficiently.</p>
+        <p>I found there wasn't a need to overcomplicate this. When looking for inspiration for my personal website, I found that many sites hide vital information past many different fancy UI's, which can make navigating the site feel like a maze. I designed this site to be simple and easy to navigate, with clear headings to get my points across simply and efficiently.</p>
       </div>
     </div>
     </motion.div>

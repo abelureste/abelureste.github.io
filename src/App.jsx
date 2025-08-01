@@ -10,6 +10,7 @@ import PiFrameProject from '../components/PiFrameProject';
 import HomelabProject from '../components/HomelabProject';
 import PersonalWebsiteProject from '../components/PersonalWebsiteProject';
 import BarWebsiteProject from '../components/BarWebsiteProject';
+import PantryPalProject from '../components/PantryPalWebsite';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ const AnimatedRoutes = () => {
         <Route path="/projects/homelab" element={<HomelabProject />} />
         <Route path="/projects/personal-website" element={<PersonalWebsiteProject />} />
         <Route path="/projects/bar-website" element={<BarWebsiteProject />} />
+        <Route path="/projects/pantrypal-website" element={<PantryPalProject />} />
       </Routes>
     </AnimatePresence>
   );

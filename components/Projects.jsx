@@ -5,7 +5,7 @@ import piFramePic from '../src/assets/piFramePic1SQUARE.jpg';
 import homelabPic from '../src/assets/homelab.jpg';
 import sakemamaPic from '../src/assets/sakemama.png';
 import personalsitePic from '../src/assets/personalsite.png';
-import isometricgamePic from '../src/assets/isometricgame.png';
+import pantrypalPic from '../src/assets/pantrypal.png'
 
 const Projects = () => {
   const location = useLocation();
@@ -42,6 +42,12 @@ const Projects = () => {
       image: homelabPic
     },
     {
+      title: "PantryPal Website",
+      description: "A fullstack application to combat food waste.",
+      link: "/projects/pantrypal-website",
+      image: pantrypalPic
+    },
+    {
       title: "Bar Website",
       description: "Website made for the bar that I work at.",
       link: "/projects/bar-website",
@@ -52,12 +58,6 @@ const Projects = () => {
       description: "The site you are browsing right now.",
       link: "/projects/personal-website",
       image: personalsitePic
-    },
-    {
-      title: "Isometric Pygame",
-      description: "An isometric videogame - current WORK IN PROGRESS",
-      link: "#",
-      image: isometricgamePic
     }
   ];
 
