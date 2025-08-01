@@ -1,5 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Import images used in this component
 import personalintro1 from '../src/assets/personalintro1.JPG';
@@ -8,6 +9,26 @@ import personalintro3 from '../src/assets/personalintro3.JPG';
 import personalintro4 from '../src/assets/personalintro4.JPG';
 
 const PersonalIntroduction = () => {
+  const location = useLocation();
+  const direction = location.state?.direction;
+
+  const pageVariants = {
+    initial: {
+      y: direction === 'down' ? '100vh' : '-100vh',
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+    exit: {
+      y: direction === 'up' ? '-100vh' : '100vh',
+      opacity: 0,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+  };
+
   const languages = [
     { name: 'Java', icon: 'fa-brands fa-java' },
     { name: 'Python', icon: 'fa-brands fa-python' },
@@ -31,10 +52,17 @@ const PersonalIntroduction = () => {
 
 
   return (
+      <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      custom={direction}
+    >
     <div className="pb-5">
       <nav className="navbar">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">← return to home</Link>
+        <div className="container-fluid justify-content-center">
+          <Link className="navbar-brand" to="/" state={{ direction: 'up' }}>⮤ return to home</Link>
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
@@ -138,6 +166,7 @@ const PersonalIntroduction = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
 
