@@ -73,10 +73,10 @@ const Projects = () => {
     >
       <div>
         <nav className="navbar">
-          <div className="container-fluid">
+          <div className="container-fluid justify-content-center">
             {/* 👇 3. Add onClick to update the direction state */}
             <Link className="navbar-brand" to="/" state={{ direction: 'up' }} onClick={() => setDirection('up')}>
-              ← return to home
+              ⮤ return to home
             </Link>
           </div>
         </nav>

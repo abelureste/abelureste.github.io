@@ -53,8 +53,8 @@ const PiFrameProject = () => {
     >
     <div className="pb-5">
       <nav className="navbar">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/projects" state={{ direction: 'up' }}>← return to projects</Link>
+        <div className="container-fluid justify-content-center">
+          <Link className="navbar-brand" to="/projects" state={{ direction: 'up' }}>⮤ return to projects</Link>
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
