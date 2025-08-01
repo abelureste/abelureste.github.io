@@ -50,7 +50,7 @@ const Home = () => {
           </div>
           <div className="row justify-content-center px-4">
             <div className="d-grid gap-2 gap-sm-4" style={{ width: '800px', padding: '0px' }}>
-              <a href="https://drive.google.com/file/d/1Wks8DfbdUIiEW4u6UsUZFrb9ycnfWnsm/view?usp=sharing" className="item-sm btn btn-dark shadow">View Resume</a>
+              <a href="https://drive.google.com/file/d/1YYy4FDJszU7DmX0XjPz2zz1QGhXzXdiH/view?usp=sharing" className="item-sm btn btn-dark shadow">View Resume</a>
               <Link to="/personal-introduction" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Personal Introduction</Link>
               <Link to="/projects" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Projects</Link>
             </div>
