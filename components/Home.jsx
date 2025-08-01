@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import homepic from '../src/assets/homepic.JPG';
@@ -8,7 +8,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
   const location = useLocation();
-  const direction = location.state?.direction;
+  // 👇 2. Use state to manage direction, initializing from the location
+  const [direction, setDirection] = useState(location.state?.direction);
 
   const pageVariants = {
     initial: {
@@ -21,7 +22,8 @@ const Home = () => {
       transition: { duration: 0.5, ease: 'easeInOut' },
     },
     exit: {
-      y: direction === 'up' ? '-100vh' : '100vh',
+      // The exit variant will now use the up-to-date 'direction' from state
+      y: direction === 'down' ? '-100vh' : '100vh',
       opacity: 0,
       transition: { duration: 0.5, ease: 'easeInOut' },
     },
@@ -49,8 +51,8 @@ const Home = () => {
           <div className="row justify-content-center px-4">
             <div className="d-grid gap-2 gap-sm-4" style={{ width: '800px', padding: '0px' }}>
               <a href="/src/assets/Abel Ureste Resume.docx" className="item-sm btn btn-dark shadow">Download Resume</a>
-              <Link to="/personal-introduction" state={{ direction: 'down' }} className="item-sm btn btn-dark shadow">Personal Introduction</Link>
-              <Link to="/projects" state={{ direction: 'down' }} className="item-sm btn btn-dark shadow">Projects</Link>
+              <Link to="/personal-introduction" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Personal Introduction</Link>
+              <Link to="/projects" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Projects</Link>
             </div>
             <div className="row justify-content-center text-center pt-2 pt-sm-4" style={{ width: '400px' }}>
               <div className="col">
