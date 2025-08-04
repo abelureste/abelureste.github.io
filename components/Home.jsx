@@ -35,8 +35,8 @@ const Home = () => {
       exit="exit"
       custom={direction}
     >
-      <div className="center-div" style={{ height: '100vh' }}>
-        <div className="container py-5 mx-5 my-5 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+      <div className="center-div p-3" style={{ height: '100vh', width: '100vw' }}>
+        <div className="container shadow py-5 mx-5 my-5 rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
           <div className="row">
             <div className="col-sm center-div pb-4 py-sm-4 px-4">
               <motion.div
@@ -49,7 +49,7 @@ const Home = () => {
                   stiffness: 300,
                 }}
               >
-                <img src={homepic} style={{ width: '300px' }} className="shadow rounded img-fluid" alt="Abel Ureste" />
+                <img src={homepic} style={{ maxWidth: '300px' }} className="shadow rounded img-fluid" alt="Abel Ureste" />
               </motion.div>
             </div>
             <div className="col-sm d-flex flex-column justify-content-center me-sm-4 px-4 px-sm-2 text-sm-start text-center">
@@ -58,7 +58,7 @@ const Home = () => {
             </div>
           </div>
           <div className="row justify-content-center px-4">
-            <div className="d-grid gap-2 gap-sm-4" style={{ width: '800px', padding: '0px' }}>
+            <div className="d-grid gap-2 gap-sm-4" style={{ maxWidth: '800px', padding: '0px' }}>
               <a href="https://drive.google.com/file/d/1YYy4FDJszU7DmX0XjPz2zz1QGhXzXdiH/view?usp=sharing" className="item-sm btn btn-dark shadow">View Resume</a>
               <Link to="/personal-introduction" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Personal Introduction</Link>
               <Link to="/projects" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Projects</Link>

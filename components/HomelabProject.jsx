@@ -53,7 +53,7 @@ const HomelabProject = () => {
       exit="exit"
       custom={direction}
     >
-    <div className="pb-5">
+    <div className="pb-5 px-3">
       <nav className="navbar">
         <div className="container-fluid justify-content-center">
           <Link className="navbar-brand" to="/projects">⮤ return to projects</Link>
