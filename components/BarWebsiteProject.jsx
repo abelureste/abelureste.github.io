@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 import barwebsitePic1 from '../src/assets/barwebsitePic1.png';
 import barwebsitePic2 from '../src/assets/barwebsitePic2.png';
 import barwebsitePic3 from '../src/assets/barwebsitePic3.png';
@@ -54,7 +57,7 @@ const BarWebsiteProject = () => {
     <div className="pb-5">
       <nav className="navbar">
         <div className="container-fluid justify-content-center">
-          <Link className="navbar-brand" to="/projects">⮤ return to projects</Link>
+          <Link className="navbar-brand" to="/projects"><FontAwesomeIcon icon={faArrowUp} size='sm'/> return to projects</Link>
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>

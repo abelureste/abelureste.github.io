@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const PersonalWebsiteProject = () => {
     const location = useLocation();
@@ -33,7 +35,7 @@ const PersonalWebsiteProject = () => {
     <div className="pb-5 px-3">
       <nav className="navbar">
         <div className="container-fluid justify-content-center">
-          <Link className="navbar-brand" to="/projects">⮤ return to projects</Link>
+          <Link className="navbar-brand" to="/projects"><FontAwesomeIcon icon={faArrowUp} size='sm'/> return to projects</Link>
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>

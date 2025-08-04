@@ -3,7 +3,7 @@ import { motion, scale } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJava, faPython, faHtml5, faCss3, faWindows, faLinux, faGit, faDocker } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faDesktop, faFlask, faScroll } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faDesktop, faFlask, faScroll, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import personalintro1 from '../src/assets/personalintro1.JPG';
 import personalintro4 from '../src/assets/personalintro4.JPG';
@@ -63,7 +63,7 @@ const PersonalIntroduction = () => {
     <div className="pb-5 px-3">
       <nav className="navbar">
         <div className="container-fluid justify-content-center">
-          <Link className="navbar-brand" to="/" state={{ direction: 'up' }}>⮤ return to home</Link>
+          <Link className="navbar-brand" to="/" state={{ direction: 'up' }}><FontAwesomeIcon icon={faArrowUp} size='sm'/> return to home</Link>
         </div>
       </nav>
       <div className="container p-sm-5 p-4 shadow rounded" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
@@ -79,12 +79,16 @@ const PersonalIntroduction = () => {
                 scale: 1.05,
                 rotate: -4,
               }}
+              whileTap={{
+                scale: 1.05,
+                rotate: -4,
+              }}
               transition={{
                 type: 'spring',
                 stiffness: 300,
               }}
             >
-              <img src={personalintro1} className="d-block w-100" alt="Introduction 1" />
+              <img src={personalintro1} className="d-block w-100 rounded" alt="Introduction 1" />
             </motion.div>
           </div>
           <div className="col-sm-8 pt-4 pt-sm-0">
@@ -136,12 +140,16 @@ const PersonalIntroduction = () => {
                 scale: 1.05,
                 rotate: 4,
               }}
+              whileTap={{
+                scale: 1.05,
+                rotate: 4,
+              }}
               transition={{
               type: 'spring',
                 stiffness: 300,
               }}
             >
-              <img src={personalintro4} className="d-block w-100" alt="Hobby 1" />
+              <img src={personalintro4} className="d-block w-100 rounded" alt="Hobby 1" />
             </motion.div>
           </div>
         </div>

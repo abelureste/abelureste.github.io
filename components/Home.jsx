@@ -44,6 +44,10 @@ const Home = () => {
                   scale: 1.05,
                   rotate: -4,
                 }}
+                whileTap={{
+                  scale: 1.05,
+                  rotate: -4,
+                }}
                 transition={{
                   type: 'spring',
                   stiffness: 300,

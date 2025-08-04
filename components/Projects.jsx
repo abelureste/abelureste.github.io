@@ -1,6 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 import piFramePic from '../src/assets/piFramePic1SQUARE.jpg';
 import homelabPic from '../src/assets/homelab.jpg';
 import sakemamaPic from '../src/assets/sakemama.png';
@@ -73,7 +76,7 @@ const Projects = () => {
         <nav className="navbar">
           <div className="container-fluid justify-content-center">
             <Link className="navbar-brand" to="/" state={{ direction: 'up' }} onClick={() => setDirection('up')}>
-              ⮤ return to home
+              <FontAwesomeIcon icon={faArrowUp} size='sm'/> return to home
             </Link>
           </div>
         </nav>
