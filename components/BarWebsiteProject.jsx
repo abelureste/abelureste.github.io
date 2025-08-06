@@ -95,7 +95,7 @@ const BarWebsiteProject = () => {
             </button>
         </div>
         <h5>My first professional project</h5>
-        <p>In today's age, if your business doesn't have an online presence, it might as well not exist. A simple website is all it takes to let people know what your business is about. In this case, the bar that I have worked at part-time during my college career lacked a real online presence. Before this website, an outdated facebook page and a dead instagram account was all that let people know this business was legit. If you looked up a place and saw nothing about it would you be inclined to go?</p>
+        <p>In today's age, if your business doesn't have an online presence, it might as well not exist. A simple website is all it takes to let people know what your business is about. In this case, the bar that I have worked at part-time during my college career lacked a real online presence. Before this website, an outdated facebook page and a dead instagram account was all that let people know this business was legit. If you looked up a place and saw nothing about it would you be inclined to go? <br/><br/>This website consists of: <ul><li>React + Vite</li><li>TailwindCSS</li><li>Framer Motion</li></ul>This website is meant to be a single page that gives a person something to click on when they search up the name of our bar. This page presents what our bar is about through simple imagery and attractive graphics, and gives crucial contact information to the public.<br/><br/>Visit this website at: <a href='https://www.sakemamauga.com/' alt="www.sakemamauga.com">www.sakemamauga.com</a></p>
       </div>
     </div>
     </motion.div>
