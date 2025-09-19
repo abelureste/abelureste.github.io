@@ -63,7 +63,7 @@ const Home = () => {
           </div>
           <div className="row justify-content-center px-4">
             <div className="d-grid gap-2 gap-sm-4" style={{ maxWidth: '800px', padding: '0px' }}>
-              <a href="https://drive.google.com/file/d/1YYy4FDJszU7DmX0XjPz2zz1QGhXzXdiH/view?usp=sharing" className="item-sm btn btn-dark shadow">View Resume</a>
+              <a href="https://drive.google.com/drive/folders/1CZFtHRf9Kal4I-JzERQ-gaJwjQyY5eEn" className="item-sm btn btn-dark shadow">View Resume</a>
               <Link to="/personal-introduction" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Personal Introduction</Link>
               <Link to="/projects" className="item-sm btn btn-dark shadow" state={{ direction: 'down' }} onClick={() => setDirection('down')}>Projects</Link>
             </div>
@@ -79,7 +79,7 @@ const Home = () => {
                 </a>
               </div>
               <div className="col">
-                <a className="item-sm btn btn-dark shadow" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                <a className="item-sm btn btn-dark shadow" href="https://www.linkedin.com/in/abelureste/" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
               </div>
