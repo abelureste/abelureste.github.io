@@ -12,10 +12,10 @@
     <p>Hello and welcome to my slice of the internet. I'm a programmer both professionally and personally. Here are a few facts about me:</p>
     <ul>
       <li>I have the best dog ever - he's named Chewy after Chewbacca</li>
-      <li>I love to wrench - its the physical version of software engineering</li>
+      <li>I love to build / create things</li>
       <li>I want to see as much of the world as possible</li>
     </ul>
-    <p>On this site you can find write ups about anything that intrigues me.</p>
+    <p>On this site you can find posts about anything that intrigues me.</p>
   </div>
 
   <div class="box">
