@@ -13,7 +13,7 @@
     <ul>
       <li>I have the best dog ever - he's named Chewy after Chewbacca</li>
       <li>I love to build / create things</li>
-      <li>I want to see as much of the world as possible</li>
+      <li>I like to explore and experience new things</li>
     </ul>
     <p>On this site you can find posts about anything that intrigues me.</p>
   </div>
