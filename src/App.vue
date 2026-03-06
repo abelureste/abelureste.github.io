@@ -35,8 +35,8 @@
   <router-view/>
 
   <div class="center">
-    <img src="./assets/button331.gif">
-    <img src="./assets/button484.gif">  
+    <img src="./assets/button331.gif" class="margin4x">
+    <img src="./assets/button484.gif" class="margin4x">  
   </div>
 
 </template>

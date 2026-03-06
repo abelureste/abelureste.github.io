@@ -32,7 +32,7 @@
   <div class="box">
     <h2>POSTS</h2>
     <hr>
-    <p class="post"><b>06 MAR 2026 > </b><RouterLink to="/post-002">#002 - Basics of 3D Rendering </RouterLink></p>
+    <p class="post"><b>05 MAR 2026 > </b><RouterLink to="/post-002">#002 - Random Dogs </RouterLink></p>
     <p class="post"><b>04 MAR 2026 > </b><RouterLink to="/post-001">#001 - Hello World! </RouterLink></p>
   </div>
 

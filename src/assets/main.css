@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  margin: -6px 0px 12px 0px;
+  margin: -6px 0px 0px 0px;
 }
 
 p {
@@ -48,14 +48,32 @@ a {
   color: var(--grad-1);
 }
 
-a:hover {
-  background-color: #116ca8;
-  transform: scale(1.02);
-  cursor: pointer;
+img {
+  border-radius: 2px;
+}
+
+a:hover:not(.button) {
+  color: #116ca8;
 }
 
 .codeParent {
   margin: 16px;
+}
+
+.margin4x {
+  margin: 0px 4px 0px 4px;
+}
+
+.margin12bottom {
+  margin-bottom: 12px;
+}
+
+.margin12y {
+  margin: 12px 0px 12px 0px;
+}
+
+.textLink {
+  color: var(--grad-2);
 }
 
 .button {
@@ -71,6 +89,12 @@ a:hover {
   color: var(--grad-1);
   text-align: center;
   text-decoration: none;
+}
+
+.button:hover {
+  background-color: #116ca8;
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .box {

@@ -4,9 +4,12 @@
 <template>
   <div class="box">
     <h2>Hello World!</h2>
-    <h3>/ 04 MAR 2026</h3>
+    <div class="twoRow">
+      <h3>#001</h3>
+      <h3 style="text-align: right;">/ 04 MAR 2026</h3>
+    </div>
     <hr>
-    <p>This is the first post on my website! For my first post, why not take part in one of programming's oldest traditions; lets write the output for "Hello World!" in a few different languages.</p>
+    <p>This is the first post on my website! For my first post, why not take part in one of programming's oldest traditions; lets write the output for "Hello World!" in a few different programming languages.</p>
 
     <div class="codeParent">
       <code>
