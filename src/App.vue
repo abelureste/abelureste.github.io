@@ -32,6 +32,10 @@
     </div>
   </div>
 
+  <div class="box CONSTRUCTION">
+    <p>This website is new and currently under construction <br>Visit my legacy website at <a class="textLink" href="https://www.abelureste.com/abelwebsiteV3/" target="#_blank">https://github.com/abelureste/abelwebsiteV3</a></p>
+  </div>
+
   <router-view/>
 
   <div class="center">

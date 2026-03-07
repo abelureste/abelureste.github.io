@@ -54,7 +54,7 @@
     <div class="center">
       <div v-if="loading === true"> Loading... </div>
       <div v-else>
-        <img :src="dogURL" style="max-width: 400px;" class="margin12y">
+        <img :src="dogURL" style="width: 400px;" class="margin12y">
         <p style="text-align: center;" class="margin12bottom">Wow that's a cute {{ breed }}!</p>
         <button @click="handleClick" class="button" style="font-size: 16px;">Another one!</button>
       </div>      

@@ -4,7 +4,7 @@
 <template>
   <div class="box">
     <div class="center" style="margin-bottom: 12px;">
-      <img src='../assets/chewy_pink_ovular.gif' style="max-width: 400px;">
+      <img src='../assets/chewy_pink_ovular.gif' style="width: 400px;">
     </div>
 
     <h2>ABOUT</h2>
@@ -32,8 +32,8 @@
   <div class="box">
     <h2>POSTS</h2>
     <hr>
-    <p class="post"><b>05 MAR 2026 > </b><RouterLink to="/post-002">#002 - Random Dogs </RouterLink></p>
-    <p class="post"><b>04 MAR 2026 > </b><RouterLink to="/post-001">#001 - Hello World! </RouterLink></p>
+    <p class="post"><b>05 MAR 2026 > </b><RouterLink to="/post-002">#002 - Random Dogs</RouterLink></p>
+    <p class="post"><b>04 MAR 2026 > </b><RouterLink to="/post-001">#001 - Hello World!</RouterLink></p>
   </div>
 
 </template>
