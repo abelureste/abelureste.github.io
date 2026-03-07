@@ -11,9 +11,16 @@
   height: 100%;
   max-width: 632px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0px;
   font-weight: normal;
 }
+
+@media screen and (min-width: 732px) {
+  #app {
+    padding: 2rem;
+  }
+}
+
 
 body {
   margin: 0px;
